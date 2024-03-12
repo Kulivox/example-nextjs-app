@@ -1,6 +1,6 @@
 'use client'
 import {CreateTodo} from "@/app/actions";
-
+// https://github.com/facebook/react/issues/27876
 export const NewTodo = () => {
     return (
         <form className="flex w-full flex-row space-x-4" action={CreateTodo} >
