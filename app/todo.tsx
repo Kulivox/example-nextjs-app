@@ -6,10 +6,10 @@ export type TodoProps = {
     completed: boolean;
 
 }
-export const Todo = ({id, title, completed}: TodoProps) => {
+export const Todo = ({id, title}: TodoProps) => {
     return (
         <div className="flex flex-row justify-between rounded border-blue-400 bg-blue-400 p-2 border-2">
-            <h3 className="font-bold flex content-center">{title}</h3>
+            <span className={"flex flex-col justify-center"}>{title}</span>
             <CompleteTodo id={id} />
         </div>
     );
