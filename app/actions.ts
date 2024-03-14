@@ -11,3 +11,16 @@ export const CreateTodo = async (formData: FormData) => {
 
     revalidatePath("/", "page");
 }
+
+export const completeTodo = async (id: string) => {
+    await prisma.todo.update({
+        where: {
+            id
+        },
+        data: {
+            completed: true
+        }
+    });
+
+    revalidatePath("/", "page");
+}

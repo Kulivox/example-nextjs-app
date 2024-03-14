@@ -7,7 +7,7 @@ export async function Todos() {
 
     return (
         <div className="flex flex-col space-y-3 w-full">
-            {todos.map(({id, title, completed}) => (
+            {todos.filter(t => !t.completed).map(({id, title, completed}) => (
                 <Todo key={id} id={id} title={title} completed={completed} />
             ))}
         </div>
